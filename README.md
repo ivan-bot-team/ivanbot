@@ -1,2 +1,1 @@
-# IvanBOT
-sexy kodovaci bot ivan
+# IVANBOT

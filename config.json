@@ -1,0 +1,37 @@
+{
+  "version": "dev",
+  "cogs": [
+    "triggers"
+  ],
+  "status": {
+
+  },
+  "ping": {
+    "frequencies": {
+      "code": 100000
+    },
+    "channels": [
+      1017323297244987455,
+      1017324429635751966
+    ],
+    "messages": {
+      "code": [
+        "chod kodit1", "chod kodit2"
+      ]
+    }
+  },
+  "triggers": [
+    {
+      "keyword": "fortnite",
+      "messages": [
+        "fortnite1", "fortnite2"
+      ]
+    },
+    {
+      "keyword": "macbook",
+      "messages": [
+        "macbook1", "macbook2"
+      ]
+    }
+  ]
+}

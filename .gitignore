@@ -1,0 +1,9 @@
+# data
+.env
+
+# useless files
+
+# editor files
+.DS_Store
+.idea
+.vscode
