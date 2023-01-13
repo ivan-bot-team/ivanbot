@@ -1,7 +1,10 @@
 {
   "version": "dev",
   "cogs": [
-    "triggers", "status"
+    "triggers", "status", "embeds"
+  ],
+  "slash_commands_guilds": [
+    "1017323297244987452"
   ],
   "status": {
       "frequency": 5,
