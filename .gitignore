@@ -2,6 +2,7 @@
 .env
 
 # useless files
+**/__pycache__
 
 # editor files
 .DS_Store

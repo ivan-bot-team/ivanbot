@@ -1,10 +1,12 @@
 {
   "version": "dev",
   "cogs": [
-    "triggers"
+    "triggers", "status"
   ],
   "status": {
-
+      "frequency": 5,
+      "messages": ["Kodim PHP", "Stazujem vo Wezeu", "Predavam deodoranty", "Kupujem macbook", "Nadavam na Microsoft"]
+      
   },
   "ping": {
     "frequencies": {
@@ -30,7 +32,7 @@
     {
       "keyword": "macbook",
       "messages": [
-        "macbook1", "macbook2"
+        "Doporucujem macbook", "Macbook W"
       ]
     }
   ]

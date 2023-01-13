@@ -29,19 +29,10 @@ intents.members = True
 # bot variable/object init
 bot = discord.Bot(intents=intents)
 
-bot_status = cycle(['Kodim PHP', 'Stazujem vo Wezeu', 'Predavam deodoranty', 'Kupujem macbook', 'Nadavam na Microsoft'])
-
-
-@tasks.loop(seconds=5)
-async def change_status():
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=next(bot_status)))
-
-
+# launch
 @bot.event
 async def on_ready():
     print('Successfully connected bot to discord services!')
-    change_status.start()
-
 
 load()
 bot.run(os.getenv('TOKEN'))
