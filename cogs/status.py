@@ -7,7 +7,7 @@ from itertools import cycle
 # helper.py
 from classes.helper import random_member
 
-global_config = json.load(open('config.json'))
+global_config = json.load(open('config.json', encoding='utf-8'))
 config = global_config['status']
 messages = cycle(config['messages'])
 

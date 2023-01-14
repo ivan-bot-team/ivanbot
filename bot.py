@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 import discord
 from discord.ext import tasks
 
-global_config = json.load(open('config.json'))
+global_config = json.load(open('config.json', encoding='utf-8'))
 
 # Loading
 

@@ -6,7 +6,7 @@ from discord.ext import tasks, commands
 # helper.py
 from classes.helper import random_member
 
-global_config = json.load(open('config.json'))
+global_config = json.load(open('config.json', encoding='utf-8'))
 config = global_config['ping']
 
 
@@ -19,7 +19,7 @@ class Ping(commands.Cog):
     async def ping_random(self):
         for channelID in config['channels']:
             channel = self.bot.get_channel(channelID)
-            member = random_member(self.bot, channel)
+            member = random_member(channel)
             message = random.choice(config['messages']['code'])
             await channel.send(f'{member.mention} {message}')
 

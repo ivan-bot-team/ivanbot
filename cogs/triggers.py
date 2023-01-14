@@ -4,9 +4,9 @@ import discord
 from discord.ext import tasks, commands
 
 # helper.py
-from classes.helper import random_member
+from classes.helper import compare_strings
 
-global_config = json.load(open('config.json'))
+global_config = json.load(open('config.json', encoding='utf-8'))
 config = global_config['triggers']
 
 
@@ -24,9 +24,9 @@ class Triggers(commands.Cog):
         content = message.content.lower()
 
         for trigger in config:
-            print(trigger)
-            if trigger['keyword'] in content:
+            if compare_strings(trigger['keyword'], content):
                 await message.channel.send(random.choice(trigger['messages']))
+                return
 
     @commands.Cog.listener()
     async def on_ready(self):

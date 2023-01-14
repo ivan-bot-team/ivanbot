@@ -2,20 +2,20 @@
     "command": {
         "description": "Ivan ti porozpráva o macoch"
     },
-    "title": "Mac",
-    "description": "Mac je proste super, lanky, vykonaný, bezpečný, a trocha aj linuxu",
+    "title": "**Mac**",
+    "description": "Mac je proste super, ľahký, vykonaný, bezpečný, a trocha aj linuxu",
     "color": "0xFF0000",
     "fields": [
         {
-        "name": "Ale ved ja chcem rat hry!",
-        "value": "Hry? Nie Ty mas kodiť! Takže toto neni argument!",
+        "name": "Ale ved ja chcem hrať hry!",
+        "value": "Hry? Nie Ty mas kódiť! Takže toto neni argument!",
         "inline": false
         }
     ],
     "footer": "Kúp si mac, už dnes!",
     "author": {
         "name": "Ivan",
-        "icon_url": "https://equichannel.cz/cms/files/equichannel.cz/contributions/P1010044_1_1.JPG"
+        "icon_url": ""
     },
     "thumbnail": "",
     "image": ""

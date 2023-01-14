@@ -7,7 +7,7 @@ global_config = json.load(open('config.json'))
 
 
 def make_embed(name):
-    data = json.load((open(f'data/embeds/{name}.json')))
+    data = json.load((open(f'data/embeds/{name}.json', encoding='utf-8')))
 
     embed = discord.Embed(
         title=data['title'],
