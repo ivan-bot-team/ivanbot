@@ -2,104 +2,61 @@
   "version": "dev",
   "string_similarity": "75",
   "cogs": [
-    "triggers", "status", "embeds"
+    "triggers",
+    "status",
+    "embeds",
+    "ping"
   ],
   "slash_commands_guilds": [
     "1017323297244987452"
   ],
   "status": {
-      "frequency": 5,
-      "messages": ["Kodim PHP", "Stazujem vo Wezeu", "Predavam deodoranty", "Kupujem macbook", "Nadavam na Microsoft"]
-      
+    "frequency": 5,
+    "messages": [
+      "Kodim PHP",
+      "Stazujem vo Wezeu",
+      "Predavam deodoranty",
+      "Kupujem macbook",
+      "Nadavam na Microsoft"
+    ]
   },
   "ping": {
     "frequencies": {
-      "code": 100000
+      "random": 60,
+      "target": 15
     },
     "channels": [
-      1017323297244987455,
-      1017324429635751966
+      1063808146814009374
     ],
-    "messages": {
+    "random_messages": [
+      "Chod kodit!",
+      "Cas na php!",
+      "October, October CMS!",
+      "Pod stazovat do wezea",
+      "Kup macbook!",
+      "Nadavaj na Microsoft!",
+      "Kedy pridu wzo-money?"
+    ],
+    "target_messages": {
       "code": [
-        "chod kodit1", "chod kodit2"
+        "Pod kodit!",
+        "Cas na php!",
+        "Treba kodit!"
+      ],
+      "wezeo": [
+        "Pod stazovat!",
+        "Pod stazovat do wezeo",
+        "Treba stazovat!",
+        "Superstazista",
+        "Kolko hodin tento tyzden vo wzo?"
+      ],
+      "mac": [
+        "Kup macbook!",
+        "Mac > Windows",
+        "Mac W",
+        "Windows L",
+        "Aky macbook mas?"
       ]
     }
-  },
-  "triggers": [
-    {
-      "keyword": "fortnite",
-      "messages": [
-        "Fortnite!", "Uz zapínam!", "Povedal niekto Fortnite??"
-      ]
-    },
-    {
-      "keyword": "macbook",
-      "messages": [
-        "Doporučujem macbook", "Macbook W", "Windows L", "Macbook fam", "Správny developer má macbook"
-      ]
-    },
-    {
-      "keyword": "windows",
-      "messages": [
-        "Windows L", "Microsoft sú kokoti", "Windows, more like useless computer", "Windows, to ešte existuje?"
-      ]
-    },
-    {
-      "keyword": "linux",
-      "messages": [
-        "Linux W", "Linux je cool"
-      ]
-    },
-    {
-      "keyword": "pdt",
-      "messages": [
-        "PDT!", "PDT W", ":flag_sk:", "Ideme kódiť"
-      ]
-    },
-    {
-      "keyword": "halova",
-      "messages": [
-        "Halova!", "Halova W", "Petržalka moment"
-      ]
-    },
-    {
-      "keyword": "nove zamky",
-      "messages": [
-        "Nove Zamky!", "Nove Zamky W", "Nove Zamky moment", "Felvidek"
-      ]
-    },
-    {
-      "keyword": "marianka",
-        "messages": [
-            "Odidem", "Pomoc nie", "Marianka moment", "Marianka je prekliata"
-        ]
-    },
-     {
-      "keyword": "penev",
-        "messages": [
-            "Penev!", "Penev L", "Penev moment", "Oliver Penev je nadmerne komicka osoba z Marianky navstevujuca spse Halova 16, je drobenho vzrastu", "Biskup Glebin"
-        ]
-    },
-        {
-      "keyword": "215",
-        "messages": [
-            "Nie", "Radsej nie", "Nechcem", "Nie dakujem"
-        ]
-    },
-       {
-      "keyword": "mimir",
-        "messages": [
-            "A mimir", "Chrrrrrr mimimimimi","https://tenor.com/view/dormir-gif-18132707"
-        ]
-       },
-      {
-      "keyword": "kodit",
-        "messages": [
-            "Kodit treba", "Chod kodit", "Treba kodit", "Kodit!", "Do wezea", "Wezeo treba robit", "Chod stazovat do wezea", "Wezeo"
-        ]
-       }
-
-  ]
-
+  }
 }

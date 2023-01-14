@@ -1,23 +1,22 @@
 {
-    "command": {
-        "description": "Ivan ti porozpráva o macoch"
-    },
-    "title": "**Mac**",
-    "description": "Mac je proste super, ľahký, vykonaný, bezpečný, a trocha aj linuxu",
-    "color": "0xFF0000",
-    "fields": [
-        {
-        "name": "Ale ved ja chcem hrať hry!",
-        "value": "Hry? Nie Ty mas kódiť! Takže toto neni argument!",
-        "inline": false
-        }
-    ],
-    "footer": "Kúp si mac, už dnes!",
-    "author": {
-        "name": "Ivan",
-        "icon_url": ""
-    },
-    "thumbnail": "",
-    "image": "https://www.apple.com/v/macbook-pro-14-and-16/a/images/meta/macbook-pro-14-and-16_overview__fz0lron5xyuu_og.png?202112020308"
-
+  "command": {
+    "description": "Ivan ti porozpráva o macoch"
+  },
+  "title": "**Mac**",
+  "description": "Mac je proste super, ľahký, vykonaný, bezpečný, a trocha aj linuxu",
+  "color": "0xFF0000",
+  "fields": [
+    {
+      "name": "Ale ved ja chcem hrať hry!",
+      "value": "Hry? Nie Ty mas kódiť! Takže toto neni argument!",
+      "inline": false
+    }
+  ],
+  "footer": "Kúp si mac, už dnes!",
+  "author": {
+    "name": "Ivan",
+    "icon_url": ""
+  },
+  "thumbnail": "",
+  "image": "https://www.apple.com/v/macbook-pro-14-and-16/a/images/meta/macbook-pro-14-and-16_overview__fz0lron5xyuu_og.png?202112020308"
 }

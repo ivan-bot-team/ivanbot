@@ -8,6 +8,7 @@ from classes.helper import compare_strings
 
 global_config = json.load(open('config.json', encoding='utf-8'))
 config = global_config['triggers']
+triggers = json.load(open('data/triggers.json', encoding='utf-8'))['triggers']
 
 
 class Triggers(commands.Cog):
@@ -23,10 +24,11 @@ class Triggers(commands.Cog):
 
         content = message.content.lower()
 
-        for trigger in config:
-            if compare_strings(trigger['keyword'], content):
-                await message.channel.send(random.choice(trigger['messages']))
-                return
+        for trigger in triggers:
+            for keyword in trigger['keywords']:
+                if compare_strings(keyword, content):
+                    await message.channel.send(random.choice(trigger['messages']))
+                    return
 
     @commands.Cog.listener()
     async def on_ready(self):
