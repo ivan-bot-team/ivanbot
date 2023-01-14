@@ -19,7 +19,7 @@ class Status(commands.Cog):
 
     @tasks.loop(seconds=config['frequency'])
     async def change_status(self):
-        await self.bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=next(messages)))
+        await self.bot.change_presence(activity=discord.Activity(type=discord.ActivityType.playing, name=next(messages)))
 
     @commands.Cog.listener()
     async def on_ready(self):

@@ -86,8 +86,20 @@
         "messages": [
             "Nie", "Radsej nie", "Nechcem", "Nie dakujem"
         ]
-    }
-  ]
+    },
+       {
+      "keyword": "mimir",
+        "messages": [
+            "A mimir", "Chrrrrrr mimimimimi","https://tenor.com/view/dormir-gif-18132707"
+        ]
+       },
+      {
+      "keyword": "kodit",
+        "messages": [
+            "Kodit treba", "Chod kodit", "Treba kodit", "Kodit!", "Do wezea", "Wezeo treba robit", "Chod stazovat do wezea", "Wezeo"
+        ]
+       }
 
+  ]
 
 }
