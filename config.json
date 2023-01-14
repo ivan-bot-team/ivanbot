@@ -72,8 +72,22 @@
     {
       "keyword": "marianka",
         "messages": [
-            "Marianka!", "Marianka W", "Marianka moment", "Marianka je cool"
+            "Odidem", "Pomoc nie", "Marianka moment", "Marianka je prekliata"
+        ]
+    },
+     {
+      "keyword": "penev",
+        "messages": [
+            "Penev!", "Penev L", "Penev moment", "Oliver Penev je nadmerne komicka osoba z Marianky navstevujuca spse Halova 16, je drobenho vzrastu", "Biskup Glebin"
+        ]
+    },
+        {
+      "keyword": "215",
+        "messages": [
+            "Nie", "Radsej nie", "Nechcem", "Nie dakujem"
         ]
     }
   ]
+
+
 }
