@@ -1,7 +1,9 @@
 {
   "triggers": [
     {
-      "keywords": ["fortnite"],
+      "keywords": [
+        "fortnite"
+      ],
       "messages": [
         "Fortnite!",
         "Uz zapínam!",
@@ -10,7 +12,9 @@
       ]
     },
     {
-      "keywords": ["macbook"],
+      "keywords": [
+        "macbook"
+      ],
       "messages": [
         "Doporučujem macbook",
         "Macbook W",
@@ -20,7 +24,9 @@
       ]
     },
     {
-      "keywords": ["windows"],
+      "keywords": [
+        "windows"
+      ],
       "messages": [
         "Windows L",
         "Microsoft sú kokoti",
@@ -29,14 +35,18 @@
       ]
     },
     {
-      "keywords": ["linux"],
+      "keywords": [
+        "linux"
+      ],
       "messages": [
         "Linux W",
         "Linux je cool"
       ]
     },
     {
-      "keywords": ["pdt"],
+      "keywords": [
+        "pdt"
+      ],
       "messages": [
         "PDT!",
         "PDT W",
@@ -45,7 +55,9 @@
       ]
     },
     {
-      "keywords": ["halova"],
+      "keywords": [
+        "halova"
+      ],
       "messages": [
         "Halova!",
         "Halova W",
@@ -53,7 +65,10 @@
       ]
     },
     {
-      "keywords": ["nove zamky", "nz"],
+      "keywords": [
+        "nove zamky",
+        "nz"
+      ],
       "messages": [
         "Nove Zamky!",
         "Nove Zamky W",
@@ -62,7 +77,9 @@
       ]
     },
     {
-      "keywords": ["marianka"],
+      "keywords": [
+        "marianka"
+      ],
       "messages": [
         "Odidem",
         "Pomoc nie",
@@ -71,7 +88,9 @@
       ]
     },
     {
-      "keywords": ["penev"],
+      "keywords": [
+        "penev"
+      ],
       "messages": [
         "Penev!",
         "Penev L",
@@ -81,7 +100,9 @@
       ]
     },
     {
-      "keywords": ["215"],
+      "keywords": [
+        "215"
+      ],
       "messages": [
         "Nie",
         "Radsej nie",
@@ -90,7 +111,9 @@
       ]
     },
     {
-      "keywords": ["mimir"],
+      "keywords": [
+        "mimir"
+      ],
       "messages": [
         "A mimir",
         "Chrrrrrr mimimimimi",
@@ -98,7 +121,10 @@
       ]
     },
     {
-      "keywords": ["kodit", "code"],
+      "keywords": [
+        "kodit",
+        "code"
+      ],
       "messages": [
         "Kodit treba",
         "Chod kodit",
@@ -111,7 +137,10 @@
       ]
     },
     {
-      "keywords": ["wezeo", "wzo"],
+      "keywords": [
+        "wezeo",
+        "wzo"
+      ],
       "messages": [
         "Wezeo treba robit",
         "Chod stazovat do wezea",
@@ -122,7 +151,10 @@
       ]
     },
     {
-      "keywords": ["microsoft", "windows"],
+      "keywords": [
+        "microsoft",
+        "windows"
+      ],
       "messages": [
         "kokoti",
         "jebem ti microsoft",
@@ -132,25 +164,67 @@
       ]
     },
     {
-      "keywords": ["hybridlab", "habibi", "habibilab"],
-        "messages": [
-            "Habibi!",
-            "Hybridlab W",
-            "https://media.discordapp.net/attachments/1017323297244987455/1047567630346752171/20221130_183859.gif"
-        ]
+      "keywords": [
+        "hybridlab",
+        "habibi",
+        "habibilab"
+      ],
+      "messages": [
+        "Habibi!",
+        "Hybridlab W",
+        "https://media.discordapp.net/attachments/1017323297244987455/1047567630346752171/20221130_183859.gif"
+      ]
     },
     {
-      "keywords": ["gameslab", "gay", "gayslab"],
-        "messages": [
-            "Gameslab L",
-            "https://media.discordapp.net/attachments/1017323297244987455/1050133345150963763/20221207_203441.gif"
-        ]
+      "keywords": [
+        "gameslab",
+        "gay",
+        "gayslab"
+      ],
+      "messages": [
+        "Gameslab L",
+        "https://media.discordapp.net/attachments/1017323297244987455/1050133345150963763/20221207_203441.gif"
+      ]
     },
-       {
-      "keywords": ["goofy", "goofer"],
-        "messages": [
-            "https://cdn.discordapp.com/attachments/1063808146814009374/1064207295367630959/longfacedogheader.png"
-        ]
+    {
+      "keywords": [
+        "goofy",
+        "goofer"
+      ],
+      "messages": [
+        "https://cdn.discordapp.com/attachments/1063808146814009374/1064207295367630959/longfacedogheader.png"
+      ]
+    },
+    {
+      "keywords": [
+        "vlak",
+        "zssk",
+        "vlaky",
+        "zeleznice",
+        "EC"
+      ],
+      "messages": [
+        "zajebane slovenske skurvene kolaje",
+        "zlocinecka spolocnost slovensko",
+        "zijeme len raz, tak do vlaku radsej nie",
+        "nie",
+        "pomoc nie",
+        "vlaky?????",
+        "EC meska 69 minut",
+        "EC meska 420 minut",
+        "Vlak smer Felvidek meska 500 minut",
+        "Vlak vyhorel, prosim chodte peso",
+        "Vlak meska 400 minut z dovodu prestavky strojvodcu",
+        "Gratujeme, vlak meska 420 minut",
+        "Hlavna stanica sa rozpadla, prosim chodte peso",
+        "Uz sa veziem 93",
+        "Na S60 radsej nenstastupuj",
+        "Kupil som listky na prvu triedu",
+        "Vidime sa na stanici",
+        "REX",
+        "Dalsia stanica! Nove Zamky!",
+        "Dalsia stanica! Halova!"
+      ]
     }
   ]
 }

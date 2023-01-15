@@ -23,8 +23,8 @@
   },
   "ping": {
     "frequencies": {
-      "random": 1440,
-      "target": 0.01
+      "random": 60,
+      "target": 15
     },
     "channels": [
       1063808146814009374
@@ -43,7 +43,12 @@
       "code": [
         "Pod kodit!",
         "Cas na php!",
-        "Treba kodit!"
+        "Treba kodit!",
+        "Kodit!",
+        "Kodis?",
+        "Kedy kodit?",
+        "Cas na kodenie! ",
+        "Kolko si dnes uz kodil?"
       ],
       "wezeo": [
         "Pod stazovat!",
