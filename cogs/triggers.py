@@ -7,7 +7,7 @@ from discord.ext import tasks, commands
 from classes.helper import compare_strings
 
 global_config = json.load(open('config.json', encoding='utf-8'))
-config = global_config['triggers']
+#config = global_config['triggers']
 triggers = json.load(open('data/triggers.json', encoding='utf-8'))['triggers']
 
 

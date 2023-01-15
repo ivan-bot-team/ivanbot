@@ -23,7 +23,7 @@
   "ping": {
     "frequencies": {
       "random": 60,
-      "target": 15
+      "target": 0.01
     },
     "channels": [
       1063808146814009374
@@ -35,7 +35,8 @@
       "Pod stazovat do wezea",
       "Kup macbook!",
       "Nadavaj na Microsoft!",
-      "Kedy pridu wzo-money?"
+      "Kedy pridu wzo-money?",
+      "Kolko si tento mesiac zarobil vo wezeu?"
     ],
     "target_messages": {
       "code": [
@@ -55,7 +56,8 @@
         "Mac > Windows",
         "Mac W",
         "Windows L",
-        "Aky macbook mas?"
+        "Aky macbook mas?",
+        "Akej farby je tvoj macbook?"
       ]
     }
   }
