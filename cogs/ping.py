@@ -49,7 +49,7 @@ class Ping(commands.Cog):
             ping_type: discord.Option(str, 'What type of ping?', choices=[
                 discord.OptionChoice('Kodit', 'code'),
                 discord.OptionChoice('Stazovat', 'wezeo'),
-                discord.OptionChoice('Kupit macbook', 'macbook')
+                discord.OptionChoice('Kupit macbook', 'mac')
             ]),
             end_time: discord.Option(float, 'How long should the pinging last? (in hours)')
     ):

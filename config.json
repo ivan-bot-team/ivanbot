@@ -8,7 +8,8 @@
     "ping"
   ],
   "slash_commands_guilds": [
-    "1017323297244987452"
+    "1017323297244987452",
+    "832167761790763050"
   ],
   "status": {
     "frequency": 5,
@@ -22,7 +23,7 @@
   },
   "ping": {
     "frequencies": {
-      "random": 60,
+      "random": 1440,
       "target": 0.01
     },
     "channels": [
