@@ -1,7 +1,7 @@
 {
   "triggers": [
     {
-      "keyword": ["fortnite"],
+      "keywords": ["fortnite"],
       "messages": [
         "Fortnite!",
         "Uz zapínam!",
@@ -10,7 +10,7 @@
       ]
     },
     {
-      "keyword": ["macbook"],
+      "keywords": ["macbook"],
       "messages": [
         "Doporučujem macbook",
         "Macbook W",
@@ -20,7 +20,7 @@
       ]
     },
     {
-      "keyword": ["windows"],
+      "keywords": ["windows"],
       "messages": [
         "Windows L",
         "Microsoft sú kokoti",
@@ -29,14 +29,14 @@
       ]
     },
     {
-      "keyword": ["linux"],
+      "keywords": ["linux"],
       "messages": [
         "Linux W",
         "Linux je cool"
       ]
     },
     {
-      "keyword": ["pdt"],
+      "keywords": ["pdt"],
       "messages": [
         "PDT!",
         "PDT W",
@@ -45,7 +45,7 @@
       ]
     },
     {
-      "keyword": ["halova"],
+      "keywords": ["halova"],
       "messages": [
         "Halova!",
         "Halova W",
@@ -53,7 +53,7 @@
       ]
     },
     {
-      "keyword": ["nove zamky"],
+      "keywords": ["nove zamky", "nz"],
       "messages": [
         "Nove Zamky!",
         "Nove Zamky W",
@@ -62,7 +62,7 @@
       ]
     },
     {
-      "keyword": ["marianka"],
+      "keywords": ["marianka"],
       "messages": [
         "Odidem",
         "Pomoc nie",
@@ -71,7 +71,7 @@
       ]
     },
     {
-      "keyword": ["penev"],
+      "keywords": ["penev"],
       "messages": [
         "Penev!",
         "Penev L",
@@ -81,7 +81,7 @@
       ]
     },
     {
-      "keyword": ["215"],
+      "keywords": ["215"],
       "messages": [
         "Nie",
         "Radsej nie",
@@ -90,7 +90,7 @@
       ]
     },
     {
-      "keyword": ["mimir"],
+      "keywords": ["mimir"],
       "messages": [
         "A mimir",
         "Chrrrrrr mimimimimi",
@@ -98,7 +98,7 @@
       ]
     },
     {
-      "keyword": ["kodit"],
+      "keywords": ["kodit", "code"],
       "messages": [
         "Kodit treba",
         "Chod kodit",
@@ -111,7 +111,7 @@
       ]
     },
     {
-      "keyword": ["wezeo"],
+      "keywords": ["wezeo", "wzo"],
       "messages": [
         "Wezeo treba robit",
         "Chod stazovat do wezea",
@@ -122,7 +122,7 @@
       ]
     },
     {
-      "keyword": ["microsoft"],
+      "keywords": ["microsoft", "windows"],
       "messages": [
         "kokoti",
         "jebem ti microsoft",
@@ -132,7 +132,7 @@
       ]
     },
     {
-      "keyword": ["hybridlab"],
+      "keywords": ["hybridlab", "habibi", "habibilab"],
         "messages": [
             "Habibi!",
             "Hybridlab W",
@@ -140,7 +140,7 @@
         ]
     },
     {
-      "keyword": ["gameslab"],
+      "keywords": ["gameslab", "gay", "gayslab"],
         "messages": [
             "Gameslab L",
             "https://media.discordapp.net/attachments/1017323297244987455/1050133345150963763/20221207_203441.gif"
