@@ -14,7 +14,7 @@
   },
   "ping": {
     "frequencies": {
-      "code": 1000
+      "code": 10
     },
     "channels": [
       1017323297244987455,
