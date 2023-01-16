@@ -26,9 +26,10 @@ class Triggers(commands.Cog):
 
         for trigger in triggers:
             for keyword in trigger['keywords']:
-                if compare_strings(keyword, content):
-                    await message.channel.send(random.choice(trigger['messages']))
-                    return
+                for word in content.split():
+                    if compare_strings(keyword, word):
+                        await message.channel.send(random.choice(trigger['messages']))
+                        return
 
     @commands.Cog.listener()
     async def on_ready(self):
