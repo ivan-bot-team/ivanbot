@@ -2,7 +2,10 @@
   "version": "dev",
   "string_similarity": "75",
   "cogs": [
-    "triggers", "status", "embeds"
+    "triggers",
+    "status",
+    "embeds",
+    "transit.trains"
   ],
   "slash_commands_guilds": [
     "1017323297244987452"
