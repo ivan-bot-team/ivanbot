@@ -13,7 +13,8 @@
     },
     {
       "keywords": [
-        "macbook"
+        "macbook",
+        "mac"
       ],
       "messages": [
         "Doporučujem macbook",
@@ -224,6 +225,23 @@
         "REX",
         "Dalsia stanica! Nove Zamky!",
         "Dalsia stanica! Halova!"
+      ]
+    },
+    {
+      "keywords": [
+        "@1063105979736141885"
+      ],
+      "messages": [
+        "co chces ty madar",
+        "pockaj kodim",
+        "nemozem mam wezeo meeting",
+        "ty si strasny madar",
+        "madar",
+        "pockaj robim wezeo",
+        "dorobim wezeo",
+        "nemozem lebo cakam na stanici lebo kokot pice zssk jebem to vlak ma meskanie",
+        "kodim",
+        "teraz wezeo"
       ]
     }
   ]
