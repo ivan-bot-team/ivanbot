@@ -2,69 +2,79 @@
   "version": "dev",
   "string_similarity": "75",
   "cogs": [
-    "triggers",
-    "status",
-    "embeds",
-    "ping"
+    "triggers", "status", "embeds"
   ],
   "slash_commands_guilds": [
-    "1017323297244987452",
-    "832167761790763050"
+    "1017323297244987452"
   ],
   "status": {
-    "frequency": 5,
-    "messages": [
-      "Kodim PHP",
-      "Stazujem vo Wezeu",
-      "Predavam deodoranty",
-      "Kupujem macbook",
-      "Nadavam na Microsoft"
-    ]
+      "frequency": 5,
+      "messages": ["Kodim PHP", "Stazujem vo Wezeu", "Predavam deodoranty", "Kupujem macbook", "Nadavam na Microsoft"]
+      
   },
   "ping": {
     "frequencies": {
-      "random": 60,
-      "target": 15
+      "code": 10
     },
     "channels": [
-      1063808146814009374
+      1017323297244987455,
+      1017324429635751966
     ],
-    "random_messages": [
-      "Chod kodit!",
-      "Cas na php!",
-      "October, October CMS!",
-      "Pod stazovat do wezea",
-      "Kup macbook!",
-      "Nadavaj na Microsoft!",
-      "Kedy pridu wzo-money?",
-      "Kolko si tento mesiac zarobil vo wezeu?"
-    ],
-    "target_messages": {
+    "messages": {
       "code": [
-        "Pod kodit!",
-        "Cas na php!",
-        "Treba kodit!",
-        "Kodit!",
-        "Kodis?",
-        "Kedy kodit?",
-        "Cas na kodenie! ",
-        "Kolko si dnes uz kodil?"
-      ],
-      "wezeo": [
-        "Pod stazovat!",
-        "Pod stazovat do wezeo",
-        "Treba stazovat!",
-        "Superstazista",
-        "Kolko hodin tento tyzden vo wzo?"
-      ],
-      "mac": [
-        "Kup macbook!",
-        "Mac > Windows",
-        "Mac W",
-        "Windows L",
-        "Aky macbook mas?",
-        "Akej farby je tvoj macbook?"
+        "chod kodit1", "chod kodit2"
       ]
     }
-  }
+  },
+  "triggers": [
+    {
+      "keyword": "fortnite",
+      "messages": [
+        "Fortnite!", "Uz zapínam!", "Povedal niekto Fortnite??"
+      ]
+    },
+
+    {
+      "keyword": "macbook",
+      "messages": [
+        "Doporučujem macbook", "Macbook W", "Windows L", "Macbook fam", "Správny developer má macbook"
+      ]
+    },
+    {
+      "keyword": "windows",
+      "messages": [
+        "Windows L", "Microsoft sú kokoti", "Windows, more like useless computer", "Windows, to ešte existuje?"
+      ]
+    },
+    {
+      "keyword": "linux",
+      "messages": [
+        "Linux W", "Linux je cool"
+      ]
+    },
+    {
+      "keyword": "pdt",
+      "messages": [
+        "PDT!", "PDT W", ":flag_sk:", "Ideme kódiť"
+      ]
+    },
+    {
+      "keyword": "halova",
+      "messages": [
+        "Halova!", "Halova W", "Petržalka moment"
+      ]
+    },
+    {
+      "keyword": "nove zamky",
+      "messages": [
+        "Nove Zamky!", "Nove Zamky W", "Nove Zamky moment", "Felvidek"
+      ]
+    },
+    {
+      "keyword": "marianka",
+        "messages": [
+            "Marianka!", "Marianka W", "Marianka moment", "Marianka je cool"
+        ]
+    }
+  ]
 }
