@@ -28,56 +28,5 @@
         "chod kodit1", "chod kodit2"
       ]
     }
-  },
-  "triggers": [
-    {
-      "keyword": "fortnite",
-      "messages": [
-        "Fortnite!", "Uz zapínam!", "Povedal niekto Fortnite??"
-      ]
-    },
-
-    {
-      "keyword": "macbook",
-      "messages": [
-        "Doporučujem macbook", "Macbook W", "Windows L", "Macbook fam", "Správny developer má macbook"
-      ]
-    },
-    {
-      "keyword": "windows",
-      "messages": [
-        "Windows L", "Microsoft sú kokoti", "Windows, more like useless computer", "Windows, to ešte existuje?"
-      ]
-    },
-    {
-      "keyword": "linux",
-      "messages": [
-        "Linux W", "Linux je cool"
-      ]
-    },
-    {
-      "keyword": "pdt",
-      "messages": [
-        "PDT!", "PDT W", ":flag_sk:", "Ideme kódiť"
-      ]
-    },
-    {
-      "keyword": "halova",
-      "messages": [
-        "Halova!", "Halova W", "Petržalka moment"
-      ]
-    },
-    {
-      "keyword": "nove zamky",
-      "messages": [
-        "Nove Zamky!", "Nove Zamky W", "Nove Zamky moment", "Felvidek"
-      ]
-    },
-    {
-      "keyword": "marianka",
-        "messages": [
-            "Marianka!", "Marianka W", "Marianka moment", "Marianka je cool"
-        ]
-    }
-  ]
+  }
 }
