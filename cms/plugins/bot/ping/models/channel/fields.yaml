@@ -1,0 +1,13 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Name
+        type: text
+        span: auto
+    channel_id:
+        label: Channel ID
+        type: text
+        span: auto

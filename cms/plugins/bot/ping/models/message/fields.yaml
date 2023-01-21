@@ -1,0 +1,18 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    message:
+        label: Message
+        type: text
+        span: full
+    type:
+        label: Type
+        type: balloon-selector
+        default: code
+        options:
+            code: Code
+            wezeo: Wezeo
+            mac: Macbook
+            random: Random

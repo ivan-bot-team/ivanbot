@@ -1,0 +1,4 @@
+1.0.1:
+    - create_groups_table.php
+    - create_keywords_table.php
+    - create_messages_table.php

@@ -1,0 +1,15 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    name:
+        label: Name
+        searchable: true
+    guild_id:
+        label: Guild ID
+        searchable: true
+

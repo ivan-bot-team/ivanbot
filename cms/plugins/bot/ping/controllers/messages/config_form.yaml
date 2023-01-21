@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Message
+
+# Model Form Field configuration
+form: $/bot/ping/models/message/fields.yaml
+
+# Model Class name
+modelClass: Bot\Ping\Models\Message
+
+# Default redirect location
+defaultRedirect: bot/ping/messages
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: bot/ping/messages/update/:id
+    redirectClose: bot/ping/messages
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: bot/ping/messages
+    redirectClose: bot/ping/messages
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

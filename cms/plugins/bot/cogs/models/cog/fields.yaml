@@ -1,0 +1,30 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+    name:
+        label: Name
+        type: text
+        span: left
+        comment: Name of the cog
+    description:
+        label: Description
+        type: text
+        span: full
+        comment: Description of the cog
+    filename:
+        label: Filename
+        type: text
+        span: left
+        comment: Filename of the cog
+    enabled:
+        label: Enabled
+        type: switch
+        span: full
+        options:
+            0: No
+            1: Yes

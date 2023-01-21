@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Group
+
+# Model Form Field configuration
+form: $/bot/triggers/models/group/fields.yaml
+
+# Model Class name
+modelClass: Bot\Triggers\Models\Group
+
+# Default redirect location
+defaultRedirect: bot/triggers/groups
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: bot/triggers/groups/update/:id
+    redirectClose: bot/triggers/groups
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: bot/triggers/groups
+    redirectClose: bot/triggers/groups
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

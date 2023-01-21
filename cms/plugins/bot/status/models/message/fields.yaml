@@ -1,0 +1,13 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+    message:
+        label: Message
+        type: text
+        span: auto
+        placeholder: Enter a message...

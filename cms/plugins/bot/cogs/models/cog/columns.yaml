@@ -1,0 +1,25 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    name:
+        label: Name
+        searchable: true
+    description:
+        label: Description
+    filename:
+        label: Filename
+        searchable: true
+    enabled:
+        label: Enabled
+        type: switch
+        searchable: true
+        sortable: true
+        options:
+            0: No
+            1: Yes
+

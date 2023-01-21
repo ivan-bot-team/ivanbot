@@ -1,0 +1,17 @@
+keywords:
+
+    label: Keywords
+    view:
+        list: $/bot/triggers/models/keyword/columns.yaml
+        toolbarButtons: add|create|remove
+    manage:
+        form: $/bot/triggers/models/keyword/fields.yaml
+
+messages:
+
+    label: Messages
+    view:
+        list: $/bot/triggers/models/message/columns.yaml
+        toolbarButtons: add|create|remove
+    manage:
+        form: $/bot/triggers/models/message/fields.yaml

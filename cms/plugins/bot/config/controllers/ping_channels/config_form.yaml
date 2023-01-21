@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Ping Channel
+
+# Model Form Field configuration
+form: $/bot/config/models/ping_channel/fields.yaml
+
+# Model Class name
+modelClass: Bot\Config\Models\PingChannel
+
+# Default redirect location
+defaultRedirect: bot/config/ping_channels
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: bot/config/ping_channels/update/:id
+    redirectClose: bot/config/ping_channels
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: bot/config/ping_channels
+    redirectClose: bot/config/ping_channels
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

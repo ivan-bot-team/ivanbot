@@ -1,0 +1,79 @@
+{
+    "name": "october/october",
+    "description": "October CMS",
+    "homepage": "https://octobercms.com",
+    "type": "project",
+    "keywords": ["october", "cms", "octobercms", "laravel"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexey Bobkov",
+            "email": "aleksey.bobkov@gmail.com",
+            "role": "Co-founder"
+        },
+        {
+            "name": "Samuel Georges",
+            "email": "daftspunky@gmail.com",
+            "role": "Co-founder"
+        }
+    ],
+    "support": {
+        "paid": "https://octobercms.com/premium-support",
+        "issues": "https://github.com/octobercms/october/issues",
+        "forum": "https://octobercms.com/forum/",
+        "docs": "https://octobercms.com/docs/",
+        "source": "https://github.com/octobercms/october"
+    },
+    "require": {
+        "php": ">=7.2.9",
+        "october/rain": "1.1.*",
+        "october/system": "1.1.*",
+        "october/backend": "1.1.*",
+        "october/cms": "1.1.*",
+        "laravel/framework": "~6.0",
+        "illuminate/bus": "^6",
+        "laravel/scout": "^7",
+        "yab/laravel-scout-mysql-driver": "^5.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.4|^9.3.3",
+        "mockery/mockery": "~1.3.3|^1.4.2",
+        "fzaninotto/faker": "~1.9",
+        "squizlabs/php_codesniffer": "3.*",
+        "php-parallel-lint/php-parallel-lint": "^1.0",
+        "dms/phpunit-arraysubset-asserts": "^0.1.0|^0.2.1"
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/concerns/InteractsWithAuthentication.php",
+            "tests/fixtures/backend/models/UserFixture.php",
+            "tests/TestCase.php",
+            "tests/PluginTestCase.php"
+        ]
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "php artisan key:generate"
+        ],
+        "post-update-cmd": [
+            "php artisan october:version"
+        ],
+        "test": [
+            "phpunit --stop-on-failure"
+        ],
+        "lint": [
+            "parallel-lint --exclude vendor --exclude storage --exclude tests/fixtures/plugins/testvendor/goto/Plugin.php ."
+        ],
+        "sniff": [
+            "phpcs --colors -nq --report=\"full\" --extensions=\"php\""
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

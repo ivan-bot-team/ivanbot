@@ -1,0 +1,25 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+    name:
+        label: Name
+        type: text
+        span: full
+    description:
+        label: Description
+        type: textarea
+        span: full
+        size: small
+    keywords:
+        label: Keywords
+        type: partial
+        path: $/bot/triggers/controllers/groups/_field_keywords.htm
+    messages:
+        label: Messages
+        type: partial
+        path: $/bot/triggers/controllers/groups/_field_messages.htm

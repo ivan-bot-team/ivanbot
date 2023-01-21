@@ -1,0 +1,29 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    string_similarity:
+        label: String Similarity
+        type: number
+        default: 75
+        span: left
+        comment: String similarity percentage to match a keyword
+    status_freq:
+        label: Status Frequency
+        type: number
+        default: 60
+        span: right
+        comment: Frequency in seconds to change status
+    ping_freq_random:
+        label: Ping Frequency Random
+        type: number
+        default: 60
+        span: left
+        comment: Random frequency in minutes to ping
+    ping_freq_target:
+        label: Ping Frequency Target
+        type: number
+        default: 10
+        span: right
+        comment: Target frequency in minutes to ping

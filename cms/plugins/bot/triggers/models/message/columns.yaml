@@ -1,0 +1,25 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    message:
+        label: Message
+        searchable: true
+    group:
+        label: Group
+        searchable: true
+        sortable: true
+        relation: group
+        select: name
+    is_random:
+        label: Random
+        type: switch
+        searchable: true
+        sortable: true
+        options:
+            0: No
+            1: Yes

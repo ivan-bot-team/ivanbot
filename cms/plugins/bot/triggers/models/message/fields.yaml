@@ -1,0 +1,33 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+    message:
+        label: Message
+        type: text
+        span: full
+    group:
+        label: Group
+        placeholder: Select group
+        span: full
+        type: recordfinder
+        list: ~/plugins/bot/triggers/models/group/columns.yaml
+        recordsPerPage: 10
+        title: Find group
+        prompt: Click the Find button to find a group
+        keyFrom: id
+        nameFrom: name
+        descriptionFrom: description
+        useRelation: true
+        modelClass: Bot\Triggers\Models\Group
+    is_random:
+        label: Random
+        type: switch
+        span: full
+        options:
+            0: No
+            1: Yes

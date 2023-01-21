@@ -1,0 +1,25 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    name:
+        label: Name
+        searchable: true
+    description:
+        label: Description
+    keywords:
+        label: Keywords
+        searchable: true
+        sortable: true
+        relation: keywords
+        select: keyword
+    messages:
+        label: Messages
+        searchable: true
+        sortable: true
+        relation: messages
+        select: message

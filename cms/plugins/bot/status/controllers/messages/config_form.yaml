@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Message
+
+# Model Form Field configuration
+form: $/bot/status/models/message/fields.yaml
+
+# Model Class name
+modelClass: Bot\Status\Models\Message
+
+# Default redirect location
+defaultRedirect: bot/status/messages
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: bot/status/messages/update/:id
+    redirectClose: bot/status/messages
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: bot/status/messages
+    redirectClose: bot/status/messages
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

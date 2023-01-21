@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Cog
+
+# Model Form Field configuration
+form: $/bot/cogs/models/cog/fields.yaml
+
+# Model Class name
+modelClass: Bot\Cogs\Models\Cog
+
+# Default redirect location
+defaultRedirect: bot/cogs/cogs
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: bot/cogs/cogs/update/:id
+    redirectClose: bot/cogs/cogs
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: bot/cogs/cogs
+    redirectClose: bot/cogs/cogs
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

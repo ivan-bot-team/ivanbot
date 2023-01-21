@@ -1,0 +1,22 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Name
+        type: text
+        span: left
+        comment: Name of the guild
+    description:
+        label: Description
+        type: text
+        span: left
+        comment: Description of the guild
+    guild_id:
+        label: Guild ID
+        type: text
+        span: full
+        comment: ID of the guild
+        required: true
+

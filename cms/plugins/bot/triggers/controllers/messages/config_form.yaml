@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Message
+
+# Model Form Field configuration
+form: $/bot/triggers/models/message/fields.yaml
+
+# Model Class name
+modelClass: Bot\Triggers\Models\Message
+
+# Default redirect location
+defaultRedirect: bot/triggers/messages
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: bot/triggers/messages/update/:id
+    redirectClose: bot/triggers/messages
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: bot/triggers/messages
+    redirectClose: bot/triggers/messages
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

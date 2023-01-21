@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Guild
+
+# Model Form Field configuration
+form: $/bot/config/models/guild/fields.yaml
+
+# Model Class name
+modelClass: Bot\Config\Models\Guild
+
+# Default redirect location
+defaultRedirect: bot/config/guilds
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: bot/config/guilds/update/:id
+    redirectClose: bot/config/guilds
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: bot/config/guilds
+    redirectClose: bot/config/guilds
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Keyword
+
+# Model Form Field configuration
+form: $/bot/triggers/models/keyword/fields.yaml
+
+# Model Class name
+modelClass: Bot\Triggers\Models\Keyword
+
+# Default redirect location
+defaultRedirect: bot/triggers/keywords
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: bot/triggers/keywords/update/:id
+    redirectClose: bot/triggers/keywords
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: bot/triggers/keywords
+    redirectClose: bot/triggers/keywords
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
