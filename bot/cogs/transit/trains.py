@@ -4,11 +4,6 @@ from datetime import datetime, timedelta
 import discord
 from discord.ext import tasks, commands
 
-global_config = json.load(open('config.json', encoding='utf-8'))
-
-
-# config = global_config['example']
-
 
 async def get_station_departures(station_name):
     station = zsr.search_stations(station_name)[0]

@@ -2,14 +2,18 @@ import random
 import json
 from datetime import datetime, timedelta
 import discord
+import asyncio
+import requests
+import os
 from discord.ext import tasks, commands
 
 # helper.py
 from classes.helper import random_member
 
-global_config = json.load(open('config.json', encoding='utf-8'))
-config = global_config['ping']
-messages = config['messages']['random'] + config['messages']['code'] + config['messages']['wezeo'] + config['messages']['mac']
+loop = asyncio.new_event_loop()
+asyncio.set_event_loop(loop)
+from bot import config
+url = os.getenv('CMS_URL')
 targets = []
 
 
@@ -18,15 +22,16 @@ class Ping(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @tasks.loop(minutes=config['frequencies']['random'])
+    @tasks.loop(minutes=config['ping_freq_random'])
     async def ping_random(self):
-        for channelID in config['channels']:
-            channel = self.bot.get_channel(channelID)
+        for pingchannel in config['ping_channels']:
+            channel = self.bot.get_channel(pingchannel['channel_id'])
             member = random_member(channel)
-            message = random.choice(messages)
+            messages = requests.get(f'{url}/api/v1/ping/').json()['data']
+            message = random.choice(messages)['message']
             await channel.send(f'{member.mention} {message}')
 
-    @tasks.loop(minutes=config['frequencies']['target'])
+    @tasks.loop(minutes=config['ping_freq_target'])
     async def ping_target(self):
         for target in targets:
             time = target['end_time']
@@ -36,11 +41,11 @@ class Ping(commands.Cog):
 
             channel = self.bot.get_channel(target['channel'])
             member = self.bot.get_user(target['member'])
-            message = random.choice(config['target_messages'][target['ping_type']])
+            message = random.choice(requests.get(f'{url}/api/v1/ping/{target["ping_type"]}').json()['data'])['message']
             await channel.send(f'{member.mention} {message}')
 
     @commands.slash_command(
-        guild_ids=global_config['slash_commands_guilds'],
+        guild_ids=config['guilds'],
         name='ping',
         description='ping a member to do something frequently'
     )
@@ -68,7 +73,7 @@ class Ping(commands.Cog):
         await ctx.respond(f'Pinging {member.mention} to {ping_type} for {end_time} hours', ephemeral=True)
 
     @commands.slash_command(
-        guild_ids=global_config['slash_commands_guilds'],
+        guild_ids=config['guilds'],
         name='remove-ping',
         description='remove the pingings of a member'
     )

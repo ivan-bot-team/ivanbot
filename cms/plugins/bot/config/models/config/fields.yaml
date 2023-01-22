@@ -3,12 +3,11 @@
 # ===================================
 
 fields:
-    string_similarity:
-        label: String Similarity
-        type: number
-        default: 75
+    bot_token:
+        label: Discord Bot Token
+        type: text
         span: left
-        comment: String similarity percentage to match a keyword
+        comment: Discord bot token to run the bot
     status_freq:
         label: Status Frequency
         type: number

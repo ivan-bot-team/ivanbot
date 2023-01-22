@@ -3,6 +3,7 @@
 namespace Bot\Triggers\Http\Controllers;
 
 use Illuminate\Routing\Controller;
+use October\Rain\Exception\ApplicationException;
 use Bot\Triggers\Http\Resources\TriggerResource as Resource;
 use Bot\Triggers\Models\Keyword;
 use Bot\Triggers\Models\Message;
@@ -14,10 +15,17 @@ class TriggerController extends Controller
         return Resource::collection(Message::all());
     }
 
-    public function search($message): \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+    public function search()
     {
-        return Resource::collection(
-            Message::where('group_id', Keyword::search($message)->get()[0]->group_id)->get()
-        );
+        $message = get('message');
+        $words = explode(' ', $message);
+        foreach ($words as $word) {
+            $keyword = Keyword::search($word)->get();
+            if ($keyword->count() > 0) {
+                return Resource::make(Message::where('group_id', $keyword[0]->group_id)->get()[0]);
+            }
+        }
+
+        throw new ApplicationException('nonefound');
     }
 }

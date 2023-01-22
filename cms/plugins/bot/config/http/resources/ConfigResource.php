@@ -9,7 +9,7 @@ class ConfigResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'string_similarity' => $this->string_similiraty,
+            'bot_token' => $this->bot_token,
             'cogs' => $this->cogs,
             'status_freq' => $this->status_freq,
             'status_messages' => $this->status_messages,

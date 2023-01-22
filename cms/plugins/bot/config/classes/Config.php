@@ -21,11 +21,11 @@ class Config
 
     public function __construct()
     {
-        $this->string_similiraty = Model::get('string_similarity');
+        $this->bot_token = Model::get('bot_token');
         $this->cogs = Cog::where('enabled', true)->get();
         $this->status_freq = Model::get('status_freq');
         $this->status_messages = Message::all();
-        $this->guilds = Guild::all();
+        $this->guilds = Guild::all()->lists('guild_id');
         $this->ping_freq_random = Model::get('ping_freq_random');
         $this->ping_freq_target = Model::get('ping_freq_target');
         $this->ping_channels = Channel::all();

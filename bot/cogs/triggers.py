@@ -1,14 +1,11 @@
 import random
 import json
-import discord
+import os
+import asyncio
 from discord.ext import tasks, commands
+import requests
 
-# helper.py
-from classes.helper import compare_strings
-
-global_config = json.load(open('config.json', encoding='utf-8'))
-# config = global_config['triggers']
-triggers = json.load(open('data/triggers.json', encoding='utf-8'))['triggers']
+url = os.getenv('CMS_URL')
 
 
 class Triggers(commands.Cog):
@@ -23,13 +20,10 @@ class Triggers(commands.Cog):
             return
 
         content = message.content.lower()
-
-        for trigger in triggers:
-            for keyword in trigger['keywords']:
-                for word in content.split():
-                    if compare_strings(keyword, word):
-                        await message.channel.send(random.choice(trigger['messages']))
-                        return
+        reply = requests.get(f'{url}/api/v1/triggers/message', params={'message': content})
+        if reply.status_code == 200:
+            await message.channel.send(reply.json()['data']['message'])
+            return
 
     @commands.Cog.listener()
     async def on_ready(self):

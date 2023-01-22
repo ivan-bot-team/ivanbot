@@ -1,22 +1,31 @@
 import json
 import os
 from itertools import cycle
+import asyncio
 from dotenv import load_dotenv
+from classes.config import load_config
 
 import discord
 from discord.ext import tasks
 
-global_config = json.load(open('config.json', encoding='utf-8'))
-
 # Loading
+config = None
+url = ''
 
 # load .env file
 load_dotenv()
 
 
+def load_conf():
+    global url
+    url = os.getenv('CMS_URL')
+    global config
+    config = asyncio.run(load_config(url))
+
+
 def load():
-    for cogs in global_config['cogs']:
-        bot.load_extension(f'cogs.{cogs}')
+    for cogs in config['cogs']:
+        bot.load_extension(f'cogs.{cogs["filename"]}')
 
 
 # bot declaration
@@ -36,5 +45,6 @@ async def on_ready():
     print('Successfully connected bot to discord services!')
 
 
+load_conf()
 load()
-bot.run(os.getenv('TOKEN'))
+bot.run(config['bot_token'])
