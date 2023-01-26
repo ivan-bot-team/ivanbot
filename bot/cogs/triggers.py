@@ -20,7 +20,7 @@ class Triggers(commands.Cog):
             return
 
         content = message.content.lower()
-        reply = requests.get(f'{url}/api/v1/triggers/message', params={'message': content})
+        reply = requests.get(f'{url}/api/v1/bot/triggers/message', params={'message': content})
         if reply.status_code == 200:
             await message.channel.send(reply.json()['data']['message'])
             return

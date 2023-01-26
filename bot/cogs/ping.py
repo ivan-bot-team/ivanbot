@@ -27,7 +27,7 @@ class Ping(commands.Cog):
         for pingchannel in config['ping_channels']:
             channel = self.bot.get_channel(pingchannel['channel_id'])
             member = random_member(channel)
-            messages = requests.get(f'{url}/api/v1/ping/').json()['data']
+            messages = requests.get(f'{url}/api/v1/bot/ping/').json()['data']
             message = random.choice(messages)['message']
             await channel.send(f'{member.mention} {message}')
 
@@ -41,7 +41,7 @@ class Ping(commands.Cog):
 
             channel = self.bot.get_channel(target['channel'])
             member = self.bot.get_user(target['member'])
-            message = random.choice(requests.get(f'{url}/api/v1/ping/{target["ping_type"]}').json()['data'])['message']
+            message = random.choice(requests.get(f'{url}/api/v1/bot/ping/{target["ping_type"]}').json()['data'])['message']
             await channel.send(f'{member.mention} {message}')
 
     @commands.slash_command(

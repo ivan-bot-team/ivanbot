@@ -1,29 +1,5 @@
 {
     "name": "october/october",
-    "description": "October CMS",
-    "homepage": "https://octobercms.com",
-    "type": "project",
-    "keywords": ["october", "cms", "octobercms", "laravel"],
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Alexey Bobkov",
-            "email": "aleksey.bobkov@gmail.com",
-            "role": "Co-founder"
-        },
-        {
-            "name": "Samuel Georges",
-            "email": "daftspunky@gmail.com",
-            "role": "Co-founder"
-        }
-    ],
-    "support": {
-        "paid": "https://octobercms.com/premium-support",
-        "issues": "https://github.com/octobercms/october/issues",
-        "forum": "https://octobercms.com/forum/",
-        "docs": "https://octobercms.com/docs/",
-        "source": "https://github.com/octobercms/october"
-    },
     "require": {
         "php": ">=7.2.9",
         "october/rain": "1.1.*",
