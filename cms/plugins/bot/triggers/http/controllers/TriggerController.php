@@ -22,7 +22,7 @@ class TriggerController extends Controller
         foreach ($words as $word) {
             $keyword = Keyword::search($word)->get();
             if ($keyword->count() > 0) {
-                return Resource::make(Message::where('group_id', $keyword[0]->group_id)->get()[0]);
+                return Resource::collection(Message::where('group_id', $keyword[0]->group_id)->get());
             }
         }
 
