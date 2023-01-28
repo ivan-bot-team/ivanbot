@@ -11,7 +11,7 @@ class CreateKeywordsTable extends Migration
         Schema::create('bot_triggers_keywords', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('group_id')->unsigned();
+            $table->integer('group_id')->unsigned()->nullable();
             $table->text('keyword')->fulltext();
             $table->timestamps();
         });
