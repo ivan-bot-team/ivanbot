@@ -7,7 +7,9 @@
         "october/backend": "1.1.*",
         "october/cms": "1.1.*",
         "laravel/framework": "~6.0",
-        "illuminate/bus": "^6"
+        "illuminate/bus": "^6",
+        "laravel/scout": "^7",
+        "yab/laravel-scout-mysql-driver": "^5.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.4|^9.3.3",

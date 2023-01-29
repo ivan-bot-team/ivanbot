@@ -78,48 +78,48 @@ class Trains(commands.Cog):
         except:
             await ctx.respond('Zajebalo sa to, jebem tie zeleznice!')
 
-    # @commands.slash_command(
-    #     guild_ids=config['guilds'],
-    #     name='track-train',
-    #     description='track a train'
-    # )
-    # async def track_train(self, ctx, train_number: discord.Option(str, 'What train do you want to track(number)?')):
-    #     try:
-    #         train = zsr.track_train("273")
-    #         number = train['trainNumber']
-    #         # type = train['trainType']
-    #         previous_station = train['trainDelay']['previousStation']
-    #         current_station = train['trainDelay']['currentStation']
-    #         next_station = train['trainDelay']['nextStation']
-    #         delay = train['trainDelay']['delayMinutes']
-    #
-    #         embed = discord.Embed(
-    #             title=f'Tracking train {number}',
-    #             # color=data['color'], TODO: fix this
-    #         )
-    #         embed.add_field(
-    #             name='Previous station',
-    #             value=previous_station,
-    #             inline=False,
-    #         )
-    #         embed.add_field(
-    #             name='Current station',
-    #             value=current_station,
-    #             inline=False,
-    #         )
-    #         embed.add_field(
-    #             name='Next station',
-    #             value=next_station,
-    #             inline=False,
-    #         )
-    #         embed.add_field(
-    #             name='Delay',
-    #             value=delay,
-    #             inline=False,
-    #         )
-    #         await ctx.respond(embed=embed)
-    #     except:
-    #         await ctx.respond('Jebem ich nejde im API')
+    @commands.slash_command(
+        guild_ids=config['guilds'],
+        name='track-train',
+        description='track a train'
+    )
+    async def track_train(self, ctx, train_number: discord.Option(str, 'What train do you want to track(number)?')):
+        try:
+            train = zsr.track_train("273")
+            number = train['trainNumber']
+            # type = train['trainType']
+            previous_station = train['trainDelay']['previousStation']
+            current_station = train['trainDelay']['currentStation']
+            next_station = train['trainDelay']['nextStation']
+            delay = train['trainDelay']['delayMinutes']
+
+            embed = discord.Embed(
+                title=f'Tracking train {number}',
+                # color=data['color'], TODO: fix this
+            )
+            embed.add_field(
+                name='Previous station',
+                value=previous_station,
+                inline=False,
+            )
+            embed.add_field(
+                name='Current station',
+                value=current_station,
+                inline=False,
+            )
+            embed.add_field(
+                name='Next station',
+                value=next_station,
+                inline=False,
+            )
+            embed.add_field(
+                name='Delay',
+                value=delay,
+                inline=False,
+            )
+            await ctx.respond(embed=embed)
+        except:
+            await ctx.respond('Jebem ich nejde im API')
 
     @commands.slash_command(
         guild_ids=config['guilds'],

@@ -20,7 +20,7 @@ class TriggerController extends Controller
         $message = get('message');
         $words = explode(' ', $message);
         foreach ($words as $word) {
-            $keyword = Keyword::where('keyword', 'like', '%'.$word.'%')->get();
+            $keyword = Keyword::search($word)->orderBy("relevance")->get();
             if ($keyword->count() > 0) {
                 return Resource::collection(Message::where('group_id', $keyword[0]->group_id)->get());
             }
