@@ -15,6 +15,7 @@ asyncio.set_event_loop(loop)
 from bot import config
 url = os.getenv('CMS_URL')
 targets = []
+new = True;
 
 
 class Ping(commands.Cog):
@@ -24,19 +25,22 @@ class Ping(commands.Cog):
 
     @tasks.loop(minutes=config['ping_freq_random'])
     async def ping_random(self):
-        for pingchannel in config['ping_channels']:
-            channel = self.bot.get_channel(pingchannel['channel_id'])
-            member = random_member(channel)
-            messages = requests.get(f'{url}/api/v1/bot/ping/').json()['data']
-            message = random.choice(messages)['message']
-            await channel.send(f'{member.mention} {message}')
+        global new
+        if new:
+            new = False
+            return
+        pingchannel = random.choice(config['ping_channels'])
+        channel = self.bot.get_channel(pingchannel['channel_id'])
+        member = random_member(channel)
+        messages = requests.get(f'{url}/api/v1/bot/ping/').json()['data']
+        message = random.choice(messages)['message']
+        await channel.send(f'{member.mention} {message}')
 
     @tasks.loop(minutes=config['ping_freq_target'])
     async def ping_target(self):
         for target in targets:
             time = target['end_time']
             if datetime.now() > time:
-                print('over')
                 targets.remove(target)
 
             channel = self.bot.get_channel(target['channel'])

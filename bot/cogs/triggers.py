@@ -25,11 +25,10 @@ class Triggers(commands.Cog):
             await message.channel.send(random.choice(reply.json()['data'])['message'])
             return
 
-        elif random.randint(0, 100) < 99:
+        elif random.randint(0, 100) > 99:
             reply = requests.get(f'{url}/api/v1/bot/triggers')
             if reply.status_code == 200:
                 await message.channel.send(random.choice(reply.json()['data'])['message'])
-
 
     @commands.Cog.listener()
     async def on_ready(self):

@@ -1,8 +1,12 @@
-import json
 import slovakrailways as zsr
 from datetime import datetime, timedelta
 import discord
 from discord.ext import tasks, commands
+import asyncio
+
+loop = asyncio.new_event_loop()
+asyncio.set_event_loop(loop)
+from bot import config
 
 
 async def get_station_departures(station_name):
@@ -10,7 +14,7 @@ async def get_station_departures(station_name):
     departures = zsr.departures(station['uicCode'])[:10]
     embed = discord.Embed(
         title=f'Departures {station["name"]}',
-        # color=data['color'], TODO: fix this
+        color=discord.Colour.green()
     )
 
     train_types = zsr.meta.train_types()
@@ -19,6 +23,7 @@ async def get_station_departures(station_name):
         destination = train['station']
         departure = str(datetime.fromtimestamp(float(str(train['timestamp'])[:-3])))[11:][:-3]
         delay = train['train']['trainDelay']
+        print(delay)
         if delay != None:
             delay = f' + {delay["delayMinutes"]} min'
         else:
@@ -48,7 +53,7 @@ class Trains(commands.Cog):
         self.bot = bot
 
     @commands.slash_command(
-        guild_ids=global_config['slash_commands_guilds'],
+        guild_ids=config['guilds'],
         name='search-station',
         description='search departures from a station'
     )
@@ -60,7 +65,7 @@ class Trains(commands.Cog):
             await ctx.respond('Zajebalo sa to, jebem tie zeleznice, skus ine meno stanice')
 
     @commands.slash_command(
-        guild_ids=global_config['slash_commands_guilds'],
+        guild_ids=config['guilds'],
         name='track-train',
         description='track a train'
     )
@@ -103,7 +108,7 @@ class Trains(commands.Cog):
             await ctx.respond('Jebem ich nejde im API')
 
     @commands.slash_command(
-        guild_ids=global_config['slash_commands_guilds'],
+        guild_ids=config['guilds'],
         name='nove-zamky',
         description='search departures from nove zamky'
     )
