@@ -9,8 +9,11 @@ asyncio.set_event_loop(loop)
 from bot import config
 
 
-async def get_station_departures(station_name):
-    station = zsr.search_stations(station_name)[0]
+async def get_station_departures(search_query, searchbyid = False):
+    if searchbyid:
+        station = zsr.station(search_query)
+    else:
+        station = zsr.search_stations(search_query)[0]
     departures = zsr.departures(station['uicCode'])[:10]
     embed = discord.Embed(
         title=f'Departures {station["name"]}',
@@ -23,7 +26,6 @@ async def get_station_departures(station_name):
         destination = train['station']
         departure = str(datetime.fromtimestamp(float(str(train['timestamp'])[:-3])))[11:][:-3]
         delay = train['train']['trainDelay']
-        print(delay)
         if delay != None:
             delay = f' + {delay["delayMinutes"]} min'
         else:
@@ -63,6 +65,18 @@ class Trains(commands.Cog):
             await ctx.respond(embed=embed)
         except:
             await ctx.respond('Zajebalo sa to, jebem tie zeleznice, skus ine meno stanice')
+
+    @commands.slash_command(
+        guild_ids=config['guilds'],
+        name='search-station-id',
+        description='search departures from a station (ID)'
+    )
+    async def search_station_id(self, ctx, station: discord.Option(str, 'What station do you want to search?')):
+        try:
+            embed = await get_station_departures(station, searchbyid=True)
+            await ctx.respond(embed=embed)
+        except:
+            await ctx.respond('Zajebalo sa to, jebem tie zeleznice!')
 
     @commands.slash_command(
         guild_ids=config['guilds'],
@@ -118,6 +132,26 @@ class Trains(commands.Cog):
             await ctx.respond(embed=embed)
         except:
             await ctx.respond('Zajebalo sa to, jebem tie zeleznice, skus ine meno stanice')
+
+    @commands.slash_command(
+        guild_ids=config['guilds'],
+        name='stations',
+        description='list stations'
+    )
+    async def stations(self, ctx, search_query: discord.Option(str, 'What station are you looking for?')):
+        stations = zsr.search_stations(search_query)
+        embed = discord.Embed(
+            title=f'Stations',
+            color=discord.Colour.green()
+        )
+        for station in stations:
+            embed.add_field(
+                name=station['name'],
+                value=station['uicCode'],
+                inline=False,
+            )
+        await ctx.respond(embed=embed)
+
 
     @commands.Cog.listener()
     async def on_ready(self):
