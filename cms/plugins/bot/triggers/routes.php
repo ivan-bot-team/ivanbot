@@ -7,7 +7,7 @@ Route::group(['prefix' => 'api'], function () {
         Route::group(['prefix' => 'bot'], function () {
             Route::group(['prefix' => 'triggers'], function () {
                 Route::get('/', [TriggerController::class, 'index']);
-                Route::get('/message', [TriggerController::class, 'search']);
+                Route::get('/search', [TriggerController::class, 'search']);
             });
         });
     });

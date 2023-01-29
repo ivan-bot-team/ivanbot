@@ -157,8 +157,6 @@ return [
         // 'Illuminate\Html\HtmlServiceProvider', // Example
 
         'System\ServiceProvider',
-        'Laravel\Scout\ScoutServiceProvider',
-        'Yab\MySQLScout\Providers\MySQLScoutServiceProvider'
     ]),
 
     /*

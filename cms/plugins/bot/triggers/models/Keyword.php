@@ -1,7 +1,6 @@
 <?php namespace Bot\Triggers\Models;
 
 use Model;
-use Laravel\Scout\Searchable;
 
 /**
  * keyword Model
@@ -9,7 +8,6 @@ use Laravel\Scout\Searchable;
 class Keyword extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-    use Searchable;
 
     /**
      * @var string The database table used by the model.
