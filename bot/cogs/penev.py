@@ -27,12 +27,12 @@ class Penev(commands.Cog):
     )
     async def penev(self, ctx):
         await ctx.respond('Oliver Penev!')
-        members = ctx.guild.members
-        for member in members:
-            try:
-                await member.edit(nick='Oliver Penev')
-            except:
-                print(f'Failed to change {member.name}\'s nickname')
+        for member in ctx.guild.members:
+            if member.nick != 'Oliver Penev':
+                try:
+                    await member.edit(nick='Oliver Penev')
+                except:
+                    pass
 
     @commands.Cog.listener()
     async def on_ready(self):

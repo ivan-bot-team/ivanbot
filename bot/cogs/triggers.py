@@ -19,6 +19,9 @@ class Triggers(commands.Cog):
         if message.author == self.bot.user:
             return
 
+        if random.randint(0, 100) < 40:
+            return
+
         content = message.content.lower()
         reply = requests.get(f'{url}/api/v1/bot/triggers/search', params={'message': content})
         if reply.status_code == 200:
